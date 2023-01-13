@@ -1,0 +1,373 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'ubuntu';
+    overflow-x: hidden;
+    
+}
+
+/*navbar*/
+nav{
+    display: flex;
+    background-color: rgb(17, 17, 84);
+    justify-content: space-around;
+    height: 80px;
+    align-items: center;
+    color: white;
+}
+
+nav .logo{
+    font-family: 'ubuntu';
+    letter-spacing: 1px;
+}
+
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+
+}
+
+nav ul li .icon{
+    text-align: center;
+}
+
+nav ul li .icon1{
+    
+    color: white;
+    background: rgb(255, 156, 8);
+    border-radius: 10px;
+    margin-left: 100px;
+    padding: 30px;
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    
+}
+
+
+/* hamburger menu */
+.menu-toggle{
+display: none;
+flex-direction: column;
+height: 20px;
+justify-content: space-between;
+position: relative;
+
+}
+
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -6px;
+    top: -3px;
+    opacity: ;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display:block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+
+form input{
+    margin-left: 20px;
+    width: 500px;
+    height: 30px;
+}
+
+form button{
+    border: none;
+    width: 100px;
+    height: 36px;
+    margin-left: -5px;
+    font-size: 16px;
+    background-color: rgb(0, 174, 255);
+    color: white;
+    font-weight: bold;
+}
+
+
+
+/* hamburger mneu animation */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: ;
+    transform: scale(0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+/* responsice breakpoint */
+/* ukuran tablet */
+@media screen and (max-width:768px){
+    nav ul{
+        width: 50%;
+    }
+}
+
+/* ukuran mobile */
+@media screen and (max-width:576px){
+    .menu-toggle{
+        display: flex;
+    }
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 39%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(17, 17, 84);
+        transform: translateX(100%); 
+        transition: all 1s;
+        cursor: none;
+    }
+
+    nav ul.slide{
+        transform: translateX(0);
+    }
+    
+}
+
+section{
+    
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+    
+}
+
+.kolom .deskripsi{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'ubuntu';
+    margin-top: 150px;
+    margin-left: 80px;
+    color: rgb(17, 17, 84);
+}
+
+.kolom .deskripsi1{
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'ubuntu';
+    margin-left: 80px;
+    margin-right: 100px;
+    margin-bottom: 10px;
+    color: rgb(255, 156, 8);
+}
+
+.kolom .deskripsi2{
+    font-size: 20px;
+    font-family: 'ubuntu';
+    font-weight: bold;
+    margin-top: px;
+    margin-left: 80px;
+    margin-right: 100px;
+    margin-bottom: px;
+    color: rgb(17, 17, 84);
+}
+
+.kolom .deskripsi3{
+    font-size: 20px;
+    font-family: 'ubuntu';
+    font-weight: bold;
+    margin-left: 80px;
+    margin-right: 100px;
+    margin-bottom: 10px;
+    color: rgb(17, 17, 84);
+}
+
+.kotak .heading .box{
+    flex: 1 1 30 rem;
+    box-shadow: 0 .5rem rgb(17, 17, 84);
+    border-radius: .5rem;
+    border: 1rem solid rgb(255, 156, 8);
+    position: relative;
+}
+ 
+body
+{
+    background-color: white;
+}
+ 
+.badan
+{
+    width: 880px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    overflow: hidden;
+}
+ 
+.badan h2
+{
+    color: crimson;
+    border-bottom: 1px solid gainsboro;
+    margin: 5px;
+    margin-bottom: 13px;
+}
+ 
+.list-produk
+{
+    border: 1px solid gainsboro;
+    padding: 25px;
+    float: left;
+    width: 200px;
+    margin: 5px;
+}
+ 
+.list-produk:hover
+{
+    transition-duration: 700ms;
+    box-shadow: 5px 5px gainsboro;
+}
+ 
+.list-produk img
+{
+    width: 100%;
+    height: 175px;
+    display: block;
+    margin-bottom: 5px;
+}
+ 
+.list-produk h4
+{
+    color: grey;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: lighter;
+}
+
+.list-produk h3
+{
+    color: black;
+    text-align: center;
+    margin-bottom: 5 px;
+    
+}
+ 
+.tombol
+{
+    text-decoration: none;
+    border-radius: 7px;
+    padding: 7px;
+    display: block;
+    float: left;
+    width: 45%;
+    margin: 4px;
+    text-align: center;
+    color: white;
+}
+ 
+
+
+.form-style-6 h1{
+	background: rgb(255, 156, 8);
+	padding: 20px 0;
+	font-size: 140%;
+	font-weight: 300;
+	text-align: center;
+	color: #fff;
+	margin: -16px -16px 16px -16px;
+}
+.form-style-6 input[type="text"],
+.form-style-6 input[type="date"],
+.form-style-6 input[type="datetime"],
+.form-style-6 input[type="email"],
+.form-style-6 input[type="number"],
+.form-style-6 input[type="search"],
+.form-style-6 input[type="time"],
+.form-style-6 input[type="url"],
+.form-style-6 textarea,
+.form-style-6 select 
+{
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 90%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+	font: 95% Arial, Helvetica, sans-serif;
+    
+}
+.form-style-6 input[type="text"]:focus,
+.form-style-6 input[type="datetime"]:focus,
+.form-style-6 input[type="email"]:focus,
+.form-style-6 input[type="number"]:focus,
+.form-style-6 input[type="search"]:focus,
+.form-style-6 input[type="time"]:focus,
+.form-style-6 input[type="url"]:focus,
+.form-style-6 textarea:focus,
+.form-style-6 select:focus
+{
+	box-shadow: 0 0 5px rgb(255, 156, 8);
+	padding: 3%;
+	border: 1px solid rgb(255, 156, 8);
+}
+
+.form-style-6 input[type="submit"],
+.form-style-6 input:hover[type="button"]{
+	
+	width: 100%;
+	padding: 3%;
+	background: rgb(255, 156, 8);
+	color: #fff;
+    background-color: rgb(17, 17, 84);
+    transition-duration: 700ms;
+    margin: -16px -16px 16px -16px;
+}
+.form-style-6 input[type="submit"]:hover,
+.form-style-6 input[type="button"]:hover{
+	background: rgb(255, 156, 8);
+}
+
+.rekomendasi{
+   
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 35%;
+    margin-right: 35%;
+    color: rgb(17, 17, 84);
+    text-align: center;
+
+   
+}
